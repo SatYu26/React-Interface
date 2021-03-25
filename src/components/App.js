@@ -1,4 +1,3 @@
-import { result } from "lodash";
 import React, { Component } from "react";
 import "../css/App.css";
 
@@ -36,7 +35,7 @@ class App extends Component {
               <div className="container">
                 <AddAppointments />
                 <SearchAppointments />
-                <ListAppointments />
+                <ListAppointments appointments={this.state.myAppointments} />
               </div>
             </div>
           </div>

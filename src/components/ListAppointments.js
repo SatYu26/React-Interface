@@ -2,7 +2,16 @@ import React, { Component } from "react";
 
 class ListAppointments extends Component {
   render() {
-    return <div>List Appointments</div>;
+    const ListItems = this.props.appointments.map((item) => {
+      return (
+        <div>
+          <div>{item.petName}</div>
+          <div>{item.ownerName}</div>
+        </div>
+      );
+    });
+
+    return <div>{ListItems}</div>;
   }
 }
 
